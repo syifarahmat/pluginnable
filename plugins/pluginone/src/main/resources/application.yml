@@ -1,0 +1,23 @@
+# i must force set this... because always error if not set or set to other.
+# because i must set : jhipster registry eureka instance is created 2 with same name [core]
+# example : defaultZone: http://admin:xx@localhost:8761/eureka/
+# my plan plugin is can develop by external team
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://admin:admin@localhost:8761/eureka/
+
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/pluginnable
+    username: postgres
+    password: xxx
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+  plugin:
+    false
